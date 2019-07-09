@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
 @import  "bootstrap";
+
 
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -23,4 +25,13 @@ body {
     background: image_url('dark-honeycomb.png');
     box-shadow: 2px 3px 4px #8C8D8E;
 
+}
+.navbar-inverse .navbar-brand {
+    color: #94B48D;
+    font-family: 'indigo_regularregular', sans-serif;
+    font-size: 26px;
+    #font-family: 'Sigmar One', cursive;
+    #font-family: "Helvetica Neue", Helvetica, sans-serif;
+    #font-weight: 600;
+    letter-spacing: 1px;
 }
