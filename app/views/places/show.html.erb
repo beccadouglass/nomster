@@ -1,0 +1,10 @@
+<% unless @place.nil? > 
+<div class="booyah-box col-10 offset-1">
+  <h1><%= @place.name %></h1>
+  <i><%= @place.address %></i>
+  <br/><br/>
+  <p><%= @place.description %></p>
+</div>
+<% else %>
+<p> This place couldn't be found</p>
+<% end %>
