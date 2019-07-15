@@ -46,15 +46,15 @@ class PlacesController < ApplicationController
         if @place.user != current_user
             return render plain: 'Not Allowed', status: :forbidden
         end 
-    end
+    
         @place.destroy
         redirect_to root_path
     end
-    
       private
     
       def place_params
         params.require(:place).permit(:name, :description, :address)
       end
 end
+
 
