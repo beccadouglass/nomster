@@ -51,7 +51,7 @@
 
 
 
-<!-- Modal -->
+<!--Comment Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -80,7 +80,7 @@
   <div style="margin-top: 10px; padding: 13px 0 10px 0;">
   
   <div class="col-10 offset-1">
-  <h1 class="float-left">Comments</h1>
+  <h2 class="float-left">Comments</h2>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-md float-right" data-toggle="modal" data-target="#myModal">
     Add a comment
@@ -101,4 +101,59 @@
     </blockquote>
   </div>
 <% end %>
+</div>
+
+
+
+<!-- Photos Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add A Photo</h4>
+      </div>
+
+
+    
+<%= simple_form_for @photo, url: 'place_photos_path(@place)' do |f| %>
+   <div class="modal-body">       
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= image_tag "image.jpg" %> 
+    </div> 
+     <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add Photo", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- Photos -->
+<div style="margin-top: 10px; padding: 13px 0 10px 0;">
+<div class="col-10 offset-1">
+  <h2 class="float-left">Photos</h2>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-md float-right" data-toggle="modal" data-target="#myModal">
+    Add a Photo
+  </button>
+</div>
+</div>
+
+<div class="clear"></div>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+  <div>
+    <blockquote>
+      <b><%= photo.caption %></b> -
+      <small><%= photo.user.email %></small>
+    </blockquote>
+    </div>
+  <% end %>
 </div>
