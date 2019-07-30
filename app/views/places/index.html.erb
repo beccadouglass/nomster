@@ -17,7 +17,7 @@
     <%= place.comments.last.message %>
     <small><%= place.comments.last.user.email %></small>
   </blockquote>
-</div>
+    </div>
 <% end %>
 
 <% if place.photos.present? %>
@@ -28,7 +28,8 @@
     </blockquote>
   </div>
 <% end %>
-
+</div>
+<% end %>
 
 <%= will_paginate @places %>
 
