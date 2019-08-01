@@ -141,12 +141,18 @@
 </div>
 
 <div class="clear"></div>
+     
+<div class="row">
+  <div class="col-sm-6">
+        <% @place.photos.each do |photo| %>
+          <div class="photo-background">
 
-    <% @place.photos.each do |photo| %>
-     <div class="photo">
-      <%= image_tag photo.picture.url %> -->
-      </div>
-      <b><%= photo.caption %></b>
-      <small><%= photo.user.email %></small>
+            <%= image_tag photo.picture.url, :class => "photo" %>
+
+          <b><%= photo.caption %></b>
+          <!-- <small><%= photo.user.email %></small> -->
+          </div>
     <% end %>
+  </div>
+</div>
   

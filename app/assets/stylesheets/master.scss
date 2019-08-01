@@ -76,11 +76,14 @@ blockquote p {
   display: inline;
 }
 
+.photo-background {
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+}
+
 .photo {
-  border: solid rgb(129, 143, 107);
-  height: 100px;
-  width: 25%;
-  padding: 50px;
+  height: 300px;
   margin: 20px;
-  background-color: rgb(71, 82, 72);
+  border: solid rgb(129, 143, 107);
 }
