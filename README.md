@@ -1,24 +1,22 @@
-# README
+# INQUEST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Yelp clone that integrates Google Map API including user comments, star ratings, image uploading and user authentication
 
-Things you may want to cover:
+TRY IT OUT: [https://nomster-becca-douglass.herokuapp.com]
 
-* Ruby version
+WATCH DEMO VIDEO: [https://youtu.be/U_p6f3HFb80]
 
-* System dependencies
 
-* Configuration
+BUILT WITH:
 
-* Database creation
+* Ruby
 
-* Database initialization
+* Ruby on Rails
 
-* How to run the test suite
+* Google API
 
-* Services (job queues, cache servers, search engines, etc.)
+* Postgresql
 
-* Deployment instructions
+* Bootstrap
 
-* ...
+
